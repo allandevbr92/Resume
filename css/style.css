@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(117, 117, 117);
+    background-color: rgb(39, 39, 39)
 }
 
 .container-card {
@@ -88,11 +88,13 @@ body {
 }
 
 #phone {
+    color: white;
     margin-left: auto;
     margin-right: auto;
 }
 
 #follow {
+    color: white;
     margin-top: auto;
     margin-left: auto;
     margin-right: auto;
@@ -100,6 +102,7 @@ body {
 }
 
 #email {
+    color: white;
     margin-top: auto;
     margin-left: auto;
     margin-right: auto;
@@ -124,6 +127,10 @@ body {
 
 #footer-elementos .email {
     padding: 25px 22px 25px 22px;
+}
+
+#up {
+    color: white;
 }
 
 @media (min-width: 600px) {
@@ -163,8 +170,9 @@ body {
         margin-top: 2em;
     }
    
-    #growdev {
-        color: white !important;
+    #saudacoes {
+        color: blue !important;
+        font-size: 25px;
     }
 
     .links-redes-sociais {
@@ -172,7 +180,7 @@ body {
     }
     
     .links-redes-sociais i {
-        color: black;
+        color: white;
         font-size: 30px;
         padding: 10px;
     }
