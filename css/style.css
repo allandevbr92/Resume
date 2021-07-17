@@ -1,10 +1,67 @@
 body {
-    background-color: rgb(39, 39, 39)
+    background: #383c42;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+header {
+    min-height: 9vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; 
+    background-color: #383c42;
+}
+
+h1 {
+    text-shadow: 2px 2px #383c42;
+}
+
+#texto-1 {
+    text-align: justify;
+    width: 600px;
+}
+
+#texto-1 p {
+    font-size: 1.2em;
+    text-shadow: 1px 1px 2px #383c42;
 }
 
 .container-card {
     padding: 20px 0px 20px 0px;
     margin-bottom: 5em;
+}
+
+.title-text {
+    margin-top: 1em;
+    font-weight: 600;    
+    color: white; 
+    margin: 10px 0 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 20em;
+    animation: type 4s steps(60, end); 
+}
+  
+.title-text:nth-child(2){
+    animation: type2 8s steps(60, end);
+}
+  
+span{
+    animation: blink 0.5s infinite;
+}
+  
+@keyframes type{ 
+    from { width: 0; } 
+} 
+  
+@keyframes type2{
+    0%{width: 0;}
+    50%{width: 0;}
+    100%{ width: 100; } 
+} 
+  
+@keyframes blink{
+    to{opacity: .0;}
 }
 
 .img-perfil-card {
@@ -13,65 +70,59 @@ body {
 }
 
 .card-title {
-    font-family: 'Poppins';
+    padding: 1.2em;
 }
 
 .hr {
+    margin-top: 1em;
+    margin-bottom: 2em;
     width: 100%;
 }
 
 .card-image {
-    height: 200px;
-    width: 200px;
-    border-radius: 20%;
-    margin-top: 2em;
+    height: 75%;
+    width: 75%;
+    border-radius: 10%;
+    margin-top: 4.5em;
 }
 
 .card-perfil {
-    background-color: #fff !important;
+    background-color: #fff;
     box-shadow: 0px 0px 20px #000000;
 }
 
-.text-center {
-    font-family: 'poppins';
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-size: 20px;
-}
-
 .botoes-card {
+    padding: 2.5em;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
 #btn-sobre {
     border-radius: 20px;
     padding: 10px 25px;
-    background-color: black !important;
+    background-color: #0166e1;
     font-weight: 600px;
-    color: #f5f5f5 !important;
-    font-family: 'Poppins';
+    color: white;
+}
+
+#btn-sobre:hover {
+    color: white;
+    background-color: #18acfe;
 }
 
 #btn-projetos {
-    border: 3px solid black;
     margin-left: 10px;
     border-radius: 20px;
     padding: 10px 25px;
     font-weight: 600px;
-    color: black !important;
-    background-color: #fff;
-    font-family: 'Poppins';
+    color: white;
+    background-color: #0166e1;
 }
 
-.icon-redes-sociais {
-    text-align: center;
-    padding: 25px;
-}
-
-.title-text {
-    margin-top: 1em;
-    font-weight: 600;
+#btn-projetos:hover {
+    color: white;
+    background-color: #18acfe;
 }
 
 .title-subtitle {
@@ -79,12 +130,38 @@ body {
 }
 
 .text {
-    padding: 40px 40px;
+    padding: 30px 30px;
     color: white;
-    font-family: 'poppins';
     font-display: justify;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 4.5%;
+
+}
+
+.bloco {
+    width: 400px;
+    margin: 15px;
+}
+
+.bloco img{
+   -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+ }
+
+.bloco img:hover {
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
+}
+
+.container {
+    position: relative;
+    margin-top: -2em;
+    padding: -1em;
 }
 
 #phone {
@@ -121,8 +198,8 @@ body {
 
 #footer-elementos {
     display: flex;
-    justify-content: space-between;
-    font-family: 'poppins';
+    align-items: center;
+    justify-content: center;    
 }
 
 #footer-elementos .email {
@@ -133,17 +210,34 @@ body {
     color: white;
 }
 
-@media (min-width: 600px) {
+#footer-redes i {
+    color: white;
+}
+
+#saudacoes {
+    display: flex;
+    flex-direction: column;
+    color: #0166e1;
+    font-size: 2em;
+}
+
+#saudacoes:hover {
+    color: white;
+    font-size: 2em;
+}
+
+
+@media (min-width: 900px) {
 
     .container-linear {
-        background: linear-gradient(to left, black 60%, #1e385d 20%);
+        background: linear-gradient(to left, #18acfe, #0166e1);
     }
 
     .card-col {
         display: flex;
         justify-content: flex-end;
         align-content: center;
-        background-color: #fff !important;
+        background-color: #fff;
         box-shadow: -10px 5px 10px 0px #292A2D;
     }
 
@@ -152,12 +246,34 @@ body {
         color: #292A2D;
         box-shadow: none !important;
         width: 18em;
-        border: none !important;
-        font-family: 'poppins';
+        border: none;
     }
 
-    .btn-card {
-        color: black !important;
+    #btn-sobre {
+        border-radius: 20px;
+        padding: 10px 25px;
+        background-color: #0166e1;
+        font-weight: 600px;
+        color: white;
+    }
+    
+    #btn-sobre:hover {
+        color: white;
+        background-color: #18acfe;
+    }
+    
+    #btn-projetos {
+        margin-left: 10px;
+        border-radius: 20px;
+        padding: 10px 25px;
+        font-weight: 600px;
+        color: white;
+        background-color: #0166e1;
+    }
+    
+    #btn-projetos:hover {
+        color: white;
+        background-color: #18acfe;
     }
 
     .text-body {
@@ -165,14 +281,22 @@ body {
     }
        
     .text {
-        max-width: 430px;
-        vertical-align: middle;
-        margin-top: 2em;
+        max-width: 50%px;
+        margin-top: 2px;
     }
-   
+
+    #follow {
+        align-items: center;
+    }  
+
     #saudacoes {
-        color: blue !important;
-        font-size: 25px;
+        color: #18acfe;
+        font-size: 2em;
+    }
+
+    #saudacoes:hover {
+        color: white;
+        font-size: 2em;
     }
 
     .links-redes-sociais {
@@ -180,18 +304,21 @@ body {
     }
     
     .links-redes-sociais i {
-        color: white;
         font-size: 30px;
         padding: 10px;
     }
 
     #footer-elementos {
-        display: flex !important;
-        justify-content: center !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-}
 
-#texto-1 {
+    #footer-redes i {
+        color: white;
+    }
+
+        
 }
 
 #texto-2 {
